@@ -1,0 +1,35 @@
+/*void idle1()
+{
+	std::cout << data[0].get_speedx()<<" "<<data[0].get_speedy()<< std::endl;
+	double buff1;
+	double buff2;
+	auto it1 = xbase.begin();
+	if (clock() >= 10000)
+	{
+		for (int i = 0; i < data.size(); i++)
+		{
+			xbase.insert(std::make_pair(data[i].getx(), &(data[i])));
+		}
+		for (auto it = xbase.begin(); it != --xbase.end(); it++)
+		{
+			it1 = it;
+			++it1;
+			buff1 = (it1->first - it->first);
+			buff1 *= buff1;
+			if (buff1 <= sigmaq)
+			{
+				buff2 = it->second->gety() - it1->second->gety();
+				buff2 *= buff2;
+				if (buff1 + buff2 <= sigmaq) it->second->collide(*(it1->second));
+			}
+		}
+	}
+	for (int i = 0; i < data.size(); i++)
+	{
+		if (data[i].getx() >= 1 || data[i].getx() <= -1) data[i].reverse_speedx();
+		if (data[i].gety() >= 1 || data[i].gety() <= -1) data[i].reverse_speedy();
+		data[i].move(0.00001);
+		t1 = clock();
+	}
+	glutPostRedisplay();
+}*/

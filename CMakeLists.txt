@@ -1,0 +1,8 @@
+cmake_minimum_required (VERSION 3.0)
+set (PROJECT gas)
+project (${PROJECT})
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+file (GLOB CPPS "*.cpp")
+file (GLOB HS "*.h")
+file (GLOB LIBS "*.lib")
+add_executable (${PROJECT} ${CPPS} ${HS} ${LIBS})
