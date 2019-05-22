@@ -1,5 +1,5 @@
 #include <iostream>
-#include <glut.h>
+#include "glut.h"
 #include <vector>
 #include "Vector.h"
 #include "Point.h"
