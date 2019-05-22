@@ -21,7 +21,8 @@ void display_molecules()
 	engine.draw_graphic();
 	glutSwapBuffers();
 }
-int main(int argc, char ** argv) {
+int main(int argc, char ** argv) 
+{
 	Distributor d1(1);
 	d1.set_num_of_directions(20);
 	d1.fill(data, 10000);

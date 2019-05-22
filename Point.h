@@ -79,8 +79,10 @@ public:
 			//std::cout << "v3: x = " << v3.getx() << " y = " << v3.gety() << std::endl;
 			Vector v4 = b.speed - v3;
 			//std::cout << "v4: x = " << v4.getx() << " y = " << v4.gety() << std::endl;
-			this->set_speed(v3 + v2);
-			b.set_speed(v4 + v1);
+			Vector tmp1 = v3 + v2;
+			this->set_speed(tmp1);
+			Vector tmp2 = v4 + v1;
+			b.set_speed(tmp2);
 		}
 	}
 };

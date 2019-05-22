@@ -1,17 +1,17 @@
 #include <glut.h>
 #include <vector>
-#include <iostream>
 class Point;
+class Distributor;
 class Graphic
 {
-private:
-	std::vector<Point>* data;
+protected:
 	int window;
 	std::vector<int> tt1;
 	std::vector<int> tt2;
 	double b1, b2;
 	unsigned int t1, t2;
 public:
+	std::vector<Point>* data;
 	Graphic(std::vector<Point> * _data, int _window)
 	{
 		data = _data;
@@ -91,7 +91,6 @@ public:
 	}
 	void update()
 	{
-		std::cout << data->size() << std::endl;
 		for (int i = 0; i < (*data).size(); i++)
 		{
 			if ((*data)[i].getx() >= 0 && (*data)[i].getx() <= 0.1)
@@ -109,4 +108,5 @@ public:
 			(*data)[i].move(0.00005);
 		}
 	}
+	friend Distributor;
 };
